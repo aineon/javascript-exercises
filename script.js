@@ -12,7 +12,15 @@ console.log('Current time is: ' + time);
 document.querySelector('#day').textContent = weekday[day];
 document.querySelector('#time').textContent = time;
 
+
 //Print contents of current window
 function printCurrentPage() {
     window.print()
 };
+
+// Get the current date in different formats
+function shortDate() {
+    let newDate = new Date();
+    let shortDate = newDate.toLocaleDateString();
+};
+console.log(shortDate());
