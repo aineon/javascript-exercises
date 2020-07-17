@@ -19,8 +19,24 @@ function printCurrentPage() {
 };
 
 // Get the current date in different formats
-function shortDate() {
-    let newDate = new Date();
-    let shortDate = newDate.toLocaleDateString();
+let today = new Date();
+let dd = today.getDate();
+let mm = today.getMonth() + 1;
+let yyyy = today.getFullYear();
+
+if (dd < 10) {
+    dd = '0' + dd;
+}
+if (mm > 10) {
+    mm = '0' + mm;
 };
-console.log(shortDate());
+
+today = mm + '-' + dd + '-' + yyyy;
+today1 = mm + '/' + dd + '/' + yyyy;
+today2 = dd + '-' + mm + '-' + yyyy;
+today3 = dd + '/' + mm + '/' + yyyy;
+
+document.write(today)\ n;
+document.write(today1);
+document.write(today2);
+document.write(today3);
